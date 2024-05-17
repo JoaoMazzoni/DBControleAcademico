@@ -1,0 +1,19 @@
+INSERT INTO Aluno Values
+('F350878','João Pedro'),
+('F376782','João Caetano')
+
+INSERT INTO Disciplina VALUES
+('MAT0506','Matematica',160),
+('ING0506','Ingles',100),
+('PORT0506','Portgues',160)
+
+
+BEGIN TRAN
+
+INSERT INTO AlunoDisciplina
+VALUES 
+('F350878','MAT0506',10,1,null,(10+1)/2,87,null, 2024,1)
+
+SELECT * FROM AlunoDisciplina
+
+ROLLBACK
